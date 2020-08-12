@@ -778,7 +778,7 @@ NetworkAnalysis <- function(jaspResults, dataset, options) {
   for (v in names(allNetworks))
     networkPlotContainer[[v]] <- createJaspPlot(title = v, width = width[v], height = height[v])
 
-  JASP:::.suppressGrDevice({
+  jaspBase:::.suppressGrDevice({
 
     for (v in names(allNetworks)) {
 
@@ -834,13 +834,13 @@ NetworkAnalysis <- function(jaspResults, dataset, options) {
   for (v in names(bootstrapResults)) {
 
     bt <- bootstrapResults[[v]]
-    p <- try(JASP:::.suppressGrDevice(plot(bt, statistic = statistic, order = "sample")))
+    p <- try(jaspBase:::.suppressGrDevice(plot(bt, statistic = statistic, order = "sample")))
 
     # sometimes bootnet catches an error and returns a faulty ggplot object.
     # here we ensure that if there was any error, e contains that error.
     e <- p
     if (!isTryError(p))
-      e <- try(JASP:::.suppressGrDevice(print(p)))
+      e <- try(jaspBase:::.suppressGrDevice(print(p)))
 
     if (isTryError(e)) {
       plotContainer[[v]]$setError(gettextf("bootnet crashed with the following error message:\n%s", .extractErrorMessage(e)))
@@ -1040,7 +1040,7 @@ NetworkAnalysis <- function(jaspResults, dataset, options) {
   # for every dataset do the analysis
   for (nw in seq_along(dataset)) {
 
-    JASP:::.suppressGrDevice(
+    jaspBase:::.suppressGrDevice(
       msg <- capture.output(
         network <- bootnet::estimateNetwork(
           data    = dataset[[nw]],
@@ -1207,7 +1207,7 @@ NetworkAnalysis <- function(jaspResults, dataset, options) {
     if (layout == "data")
       layout <- "circle"
 
-    JASP:::.suppressGrDevice(layout <- qgraph::averageLayout(networks, layout = layout, repulsion = options[["repulsion"]]))
+    jaspBase:::.suppressGrDevice(layout <- qgraph::averageLayout(networks, layout = layout, repulsion = options[["repulsion"]]))
     rownames(layout) <- .unv(colnames(networks[[1L]]))
 
   } else {
@@ -1300,7 +1300,7 @@ NetworkAnalysis <- function(jaspResults, dataset, options) {
 
   startProgressbar(noTicks * 2L, "Bootstrapping network")
   tryCatch({
-    JASP:::.suppressGrDevice({
+    jaspBase:::.suppressGrDevice({
       for (nm in names(allNetworks)) {
 
         # .networkAnalysisBootnetBootnet replaces bootnet::bootnet so we can have a progress bar
