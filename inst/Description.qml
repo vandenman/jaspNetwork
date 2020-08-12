@@ -3,7 +3,7 @@ import JASP.Module 	1.0
 
 Description
 {
-	name:			"Network"
+	name:			"jaspNetwork"
 	title:			qsTr("Network")
 	description:	qsTr("Network module.")
 	icon:			"analysis-network.svg"

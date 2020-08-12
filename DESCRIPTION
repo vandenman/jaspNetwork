@@ -1,4 +1,4 @@
-Package: Network
+Package: jaspNetwork
 Type: Package
 Title: Network Module for JASP
 Version: 0.0.0
