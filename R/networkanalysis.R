@@ -100,6 +100,35 @@ NetworkAnalysis <- function(jaspResults, dataset, options) {
       }
     }
 
+    # see https://github.com/jasp-stats/jasp-issues/issues/1068
+    # bootnet::estimateNetwork -> bootnet::bootnet_EBICglasso -> qgraph::cor_auto ->
+    # lavaan::lavCor -> lavaan:::lavData -> lavaan::lav_data_full -> lavaan:::lav_data_missing_patterns
+    # the last function returns a list with the indices of missing values and then lavaan does
+    # warning("lavaan WARNING: some cases are empty and will be ignored:\n  ",
+    #    paste(empty.case.idx, collapse = " "))
+    # to show a warning. However, this string can get so big that the C stack overflows...
+    # this only occurs for options[["estimator"]] == "EBICglasso" && options[["correlationMethod"]] == "auto"
+    # but the check is so trivial that we should probably always do it.
+
+    customChecks <- c(
+      customChecks,
+      function() {
+        # adapted from lavaan:::lav_data_missing_patterns(dataset, sort.freq = TRUE, coverage = TRUE)
+        # number of rows with missing values
+        missingValues <- !is.na(dataset)
+        numberOfEmptyRows <- sum(rowSums(missingValues) == 0L)
+        if (numberOfEmptyRows > 1e4) {
+          return(gettext(
+            "More than 10 000 rows consist entirely of missing values. Please remove these rows from the data set if you wish to continue."
+          ))
+        } else if (numberOfEmptyRows / nrow(dataset) > 0.3) {
+          return(gettext(
+            "Over 30% of the rows consist entirely of missing values. Please remove these rows from the data set if you wish to continue."
+          ))
+        }
+        return(NULL)
+      }
+    )
 
     # default error checks
     checks <- c("infinity", "variance", "observations", "varCovData")
