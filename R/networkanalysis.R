@@ -110,28 +110,28 @@ NetworkAnalysis <- function(jaspResults, dataset, options) {
     # this only occurs for options[["estimator"]] == "EBICglasso" && options[["correlationMethod"]] == "auto"
     # but the check is so trivial that we should probably always do it.
 
-    customChecks <- c(
-      customChecks,
-      function() {
-        # adapted from lavaan:::lav_data_missing_patterns(dataset, sort.freq = TRUE, coverage = TRUE)
-        # number of rows with missing values
-        missingValues <- !is.na(dataset)
-        numberOfEmptyRows <- sum(rowSums(missingValues) == 0L)
-        if (numberOfEmptyRows > 1e4) {
-          return(gettext(
-            "More than 10 000 rows consist entirely of missing values. Please remove these rows from the data set if you wish to continue."
-          ))
-        } else if (numberOfEmptyRows / nrow(dataset) > 0.3) {
-          return(gettext(
-            "Over 30% of the rows consist entirely of missing values. Please remove these rows from the data set if you wish to continue."
-          ))
-        }
-        return(NULL)
-      }
-    )
+    # customChecks <- c(
+    #   customChecks,
+    #   function() {
+    #     # adapted from lavaan:::lav_data_missing_patterns(dataset, sort.freq = TRUE, coverage = TRUE)
+    #     # number of rows with missing values
+    #     missingValues <- !is.na(dataset)
+    #     numberOfEmptyRows <- sum(rowSums(missingValues) == 0L)
+    #     if (numberOfEmptyRows > 1e4) {
+    #       return(gettext(
+    #         "More than 10 000 rows consist entirely of missing values. Please remove these rows from the data set if you wish to continue."
+    #       ))
+    #     } else if (numberOfEmptyRows / nrow(dataset) > 0.3) {
+    #       return(gettext(
+    #         "Over 30% of the rows consist entirely of missing values. Please remove these rows from the data set if you wish to continue."
+    #       ))
+    #     }
+    #     return(NULL)
+    #   }
+    # )
 
     # default error checks
-    checks <- c("infinity", "variance", "observations", "varCovData")
+    checks <- c("infinity", "variance", "observations", "varCovData", "missingRows")
 
     # hasErrors wants the dataset as a single thing instead of as a list of data.frames
     # we could also just ignore the grouping elements and loop manually though
@@ -177,6 +177,7 @@ NetworkAnalysis <- function(jaspResults, dataset, options) {
                varCovData.grouping = groupingVariable,
                varCovData.corFun = fun,
                varCovData.corArgs = list(use = "pairwise"),
+               missingRows.target = options[["variables"]],
                custom = customChecks,
                exitAnalysisIfErrors = TRUE)
   }
