@@ -237,12 +237,12 @@ Form
 			name: "BootstrapType"
 			title: qsTr("Bootstrap Type")
 			Layout.rowSpan: 2
-			RadioButton { value: "nonparametric";	label: qsTr("Nonparametric"); checked: true	}
-			RadioButton { value: "case";			label: qsTr("Case")							}
-			RadioButton { value: "node";			label: qsTr("Node")							}
-			RadioButton { value: "parametric";		label: qsTr("Parametric")					}
-			RadioButton { value: "person";			label: qsTr("Person")						}
-			RadioButton { value: "jackknife";		label: qsTr("Jackknife")					}
+			RadioButton { value: "nonparametric";	label: qsTr("Nonparametric"); checked: true									}
+			RadioButton { value: "case";			label: qsTr("Case");							id: bootstrapTypeCase 		}
+			RadioButton { value: "node";			label: qsTr("Node");							id: bootstrapTypeNode		}
+			RadioButton { value: "parametric";		label: qsTr("Parametric")													}
+			RadioButton { value: "person";			label: qsTr("Person")														}
+			RadioButton { value: "jackknife";		label: qsTr("Jackknife")													}
 		}
 
 		Group
@@ -250,6 +250,21 @@ Form
 			title: qsTr("Statistics")
 			CheckBox { name: "StatisticsEdges";			label: qsTr("Edges");		checked: true }
 			CheckBox { name: "StatisticsCentrality";	label: qsTr("Centrality");	checked: true }
+			CheckBox
+			{
+				enabled:	bootstrapTypeCase.checked// || bootstrapTypeNode.checked // enable this once bootnet fixes the node case
+				name:		"corStability"
+				label:		qsTr("Stability")
+				checked:	false
+				DoubleField
+				{
+					title:			qsTr("Correlation")
+					name:			"corStabilityValue"
+					min:			0.0
+					max:			1.0
+					defaultValue:	0.7
+				}
+			}
 		}
 	}
 

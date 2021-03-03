@@ -440,6 +440,43 @@ NetworkAnalysis <- function(jaspResults, dataset, options) {
 
 }
 
+.networkAnalysisBootstrapStabilityTable <- function(bootstrapContainer, bootstrapResults, options, position) {
+
+  if (!is.null(bootstrapContainer[["corStability"]]) || !options[["corStability"]] || is.null(bootstrapResults) ||
+      # enable this once bootnet fixes the node case
+      # !(bootstrapResults[[1L]][["type"]] %in% c("node", "person")) # check from bootnet::corStability
+      !(bootstrapResults[[1L]][["type"]] %in% "person") # check from bootnet::corStability
+    )
+    return()
+
+  # bootnet prints a lot of unnessecary information
+  capture.output({
+    tbValues <- t(vapply(bootstrapResults, bootnet::corStability, numeric(4L)))
+  })
+
+  table <- createJaspTable(title = gettext("Correlation stability coefficients"), position = position)
+
+  nms <- names(bootstrapResults)
+  if (length(nms) >= 2L) {
+    table$addColumnInfo(name = "network", title = gettext("Network"), type = "string")
+    table[["network"]] <- nms
+  }
+
+  table$addColumnInfo(name = "betweenness", title = gettext("Betweenness"), type = "number")
+  table$addColumnInfo(name = "closeness",   title = gettext("Closeness"),   type = "number")
+  table$addColumnInfo(name = "edge",        title = gettext("Edge"),        type = "number")
+  table$addColumnInfo(name = "strength",    title = gettext("Strength"),    type = "number")
+
+  table$addFootnote(gettextf("Maximum drop proportions to retain a correlation of %s in at least 95%% of the samples:", options[["corStabilityValue"]]))
+  table$dependOn(c("corStability", "corStabilityValue"))
+
+  for (nm in colnames(tbValues))
+    table[[nm]] <- tbValues[, nm]
+
+  bootstrapContainer[["corStability"]] <- table
+
+}
+
 # plots ----
 .networkAnalysisPlotContainer <- function(mainContainer, network, options) {
 
@@ -1280,8 +1317,9 @@ NetworkAnalysis <- function(jaspResults, dataset, options) {
   if (length(bootstrapResults) > 0L && !bootstrapContainer$getError())
     bootstrapContainer[["bootstrapState"]] <- createJaspState(bootstrapResults)
 
-  .networkAnalysisBootstrapPlot(bootstrapContainer, bootstrapResults, options, statistic = "edge", position = 92)
-  .networkAnalysisBootstrapPlot(bootstrapContainer, bootstrapResults, options, statistic = c("strength", "betweenness", "closeness"), position = 93)
+  .networkAnalysisBootstrapStabilityTable(bootstrapContainer, bootstrapResults, options, position = 92)
+  .networkAnalysisBootstrapPlot(bootstrapContainer, bootstrapResults, options, statistic = "edge", position = 93)
+  .networkAnalysisBootstrapPlot(bootstrapContainer, bootstrapResults, options, statistic = c("strength", "betweenness", "closeness"), position = 94)
 
 }
 
