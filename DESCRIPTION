@@ -6,7 +6,7 @@ Date: 2020-05-04
 Author: JASP Team
 Website: jasp-stats.org
 Maintainer: JASP Team <info@jasp-stats.org>
-Description: Network module.
+Description: Explore the connections between variables organized as a network
 License: GPL (>= 2)
 Encoding: UTF-8
 Imports:
