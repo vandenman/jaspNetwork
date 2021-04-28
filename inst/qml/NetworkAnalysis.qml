@@ -44,7 +44,7 @@ Form
 			{ value: "IsingFit",		label: "IsingFit"			},
 			{ value: "IsingSampler",	label: "IsingSampler"		},
 			{ value: "huge",			label: qsTr("huge")			},
-			{ value: "adalasso",		label: "adalasso"			},
+//			{ value: "adalasso",		label: "adalasso"			},	// no longer available due to removal of parcor from CRAN
 			{ value: "mgm",				label: "mgm"				}
 		]
 	}
@@ -84,7 +84,10 @@ Form
 		{
 			name: "normalizeCentrality"
 			title: qsTr("Centrality Measures")
-			visible: estimator.currentIndex === 0
+			visible: {
+				console.log("estimator.currentValue = "+estimator.currentValue)
+				estimator.currentIndex === 0
+			}
 			RadioButton { value: "normalized";	label: qsTr("Normalized"); checked: true }
 			RadioButton { value: "relative" ;	label: qsTr("Relative")					}
 			RadioButton { value: "raw";			label: qsTr("Raw")						}
@@ -131,7 +134,7 @@ Form
 		{
 			name: "criterion"
 			title: qsTr("Criterion")
-			visible: [5, 7].includes(estimator.currentIndex)
+			visible: [5, 6].includes(estimator.currentIndex)
 			RadioButton { value: "ebic";	label: qsTr("EBIC"); checked: true	}
 			RadioButton { value: "ric";		label: qsTr("RIC")					}
 			RadioButton { value: "stars";	label: qsTr("STARS")				}
@@ -142,7 +145,7 @@ Form
 		{
 			name: "rule"
 			title: qsTr("Rule")
-			visible: [3, 7].includes(estimator.currentIndex)
+			visible: [3, 6].includes(estimator.currentIndex)
 			RadioButton { value: "and";	label: qsTr("AND"); checked: true	}
 			RadioButton { value: "or";	label: qsTr("OR")					}
 		}
@@ -205,7 +208,7 @@ Form
 
 		VariablesForm
 		{
-			visible: [7].includes(estimator.currentIndex)
+			visible: [6].includes(estimator.currentIndex)
 			AvailableVariablesList
 			{
 				title: qsTr("Variables in network")
