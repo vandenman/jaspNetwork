@@ -5,7 +5,7 @@ Description
 {
 	name:			"jaspNetwork"
 	title:			qsTr("Network")
-	description:	qsTr("Network module.")
+	description:	qsTr("Explore the connections between variables organized as a network")
 	icon:			"analysis-network.svg"
 	version:		"0.13"
 	author:			"JASP Team"
