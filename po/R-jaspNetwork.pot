@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspNetwork 0.15\n"
-"POT-Creation-Date: 2021-03-06 15:52\n"
+"POT-Creation-Date: 2021-05-07 11:21\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -161,63 +161,6 @@ msgid "Some entries of %1$s were not understood. These are now grouped under '%2
 msgstr ""
 
 msgid "bootnet crashed with the following error message:\n%s. <ul><li>Please check if there are variables in the network with little variance or few distinct observations.</li></ul>"
-msgstr ""
-
-msgid "'data' can only be missing if type = 'parametric'. Setting type = 'parametric' and performing parametric bootstrap instead."
-msgstr ""
-
-msgid "'graph' may not be missing in parametric bootstrap when 'data' is missing."
-msgstr ""
-
-msgid "'sampleSize' may not be missing in parametric bootstrap when 'data' is missing."
-msgstr ""
-
-msgid "'data' is ignored when using manual parametric bootstrap."
-msgstr ""
-
-msgid "Removing non-numeric columns:"
-msgstr ""
-
-msgid ";"
-msgstr ""
-
-msgid "Jacknife overwrites nBoot to sample size"
-msgstr ""
-
-msgid "Node-wise bootstrapping requires at least three nodes."
-msgstr ""
-
-msgid "'data' argument must be a data frame"
-msgstr ""
-
-msgid "'model' must be set in parametric bootstrap without 'data'."
-msgstr ""
-
-msgid "model set to '"
-msgstr ""
-
-msgid "'"
-msgstr ""
-
-msgid "Estimating sample network..."
-msgstr ""
-
-msgid "Bootstrapping..."
-msgstr ""
-
-msgid "Model '"
-msgstr ""
-
-msgid "' not supported."
-msgstr ""
-
-msgid "Maximum number of errors in bootstraps reached"
-msgstr ""
-
-msgid "progress function failed: Cancelled by callback"
-msgstr ""
-
-msgid "Computing statistics..."
 msgstr ""
 
 msgid        "%1$s X-Coordinates for variable %2$s was not understood."

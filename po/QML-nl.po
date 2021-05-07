@@ -12,10 +12,6 @@ msgctxt "Description|"
 msgid "Network"
 msgstr "Netwerk"
 
-msgctxt "Description|"
-msgid "Network module."
-msgstr "Netwerk module."
-
 msgctxt "NetworkAnalysis|"
 msgid "Dependent Variables"
 msgstr "Afhankelijke variabelen"
@@ -575,3 +571,7 @@ msgstr "naam voor x-coördinaten"
 msgctxt "NetworkAnalysis|"
 msgid "name for y-coordinates"
 msgstr "naam voor y-coördinaten"
+
+msgctxt "Description|"
+msgid "Explore the connections between variables organized as a network"
+msgstr ""

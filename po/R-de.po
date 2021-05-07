@@ -2,11 +2,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
-"POT-Creation-Date: 2021-01-05 09:38\n"
+"POT-Creation-Date: 2021-05-07 11:21\n"
 "PO-Revision-Date: 2021-04-09 16:26+0000\n"
 "Last-Translator: Johannes Keyser <johanneskeyser@posteo.de>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/jasp/"
-"jaspnetwork-r/de/>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/jasp/jaspnetwork-"
+"r/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -228,8 +228,8 @@ msgstr ""
 msgid ""
 "Some entries of %1$s were not understood. These are now grouped under '%2$s'."
 msgstr ""
-"Manche Einträge von %1$s wurden nicht verstanden. Diese sind nun unter '%2$"
-"s' gruppiert."
+"Manche Einträge von %1$s wurden nicht verstanden. Diese sind nun unter "
+"'%2$s' gruppiert."
 
 msgid ""
 "bootnet crashed with the following error message:\n"
@@ -240,73 +240,6 @@ msgstr ""
 "%s. <ul><li>Bitte prüfe, ob es Variablen im Netzwerk mit geringer Varianz "
 "oder wenigen unterschiedlichen Beobachtungen gibt.</li></ul>"
 
-msgid ""
-"'data' can only be missing if type = 'parametric'. Setting type = "
-"'parametric' and performing parametric bootstrap instead."
-msgstr ""
-"'Daten' darf nur fehlen, wenn Typ = 'parametrisch'. Setze Typ = "
-"'parametrisch' und wähle stattdessen parametrischen Bootstrap."
-
-msgid ""
-"'graph' may not be missing in parametric bootstrap when 'data' is missing."
-msgstr ""
-"'graph' darf im parametrischen Bootstrap nicht fehlen, wenn 'Daten' fehlen."
-
-msgid ""
-"'sampleSize' may not be missing in parametric bootstrap when 'data' is "
-"missing."
-msgstr ""
-
-msgid "'data' is ignored when using manual parametric bootstrap."
-msgstr ""
-"'Daten' wird bei Verwendung des manuellen parametrischen Bootstraps "
-"ignoriert."
-
-msgid "Removing non-numeric columns:"
-msgstr "Nicht numerische Spalten entfernen:"
-
-msgid ";"
-msgstr ";"
-
-msgid "Jacknife overwrites nBoot to sample size"
-msgstr "Jacknife überschreibt nBoot mit Stichprobengröße"
-
-msgid "Node-wise bootstrapping requires at least three nodes."
-msgstr "Das knotenweise Bootstrapping erfordert mindestens drei Knoten."
-
-msgid "'data' argument must be a data frame"
-msgstr "Argument 'data' muss ein Data Frame sein"
-
-msgid "'model' must be set in parametric bootstrap without 'data'."
-msgstr "'model' muss im parametrischen Bootstrap ohne 'data' gesetzt werden."
-
-msgid "model set to '"
-msgstr "Modell gesetzt auf '"
-
-msgid "'"
-msgstr "'"
-
-msgid "Estimating sample network..."
-msgstr "Schätzung des Beispielnetzwerks ..."
-
-msgid "Bootstrapping..."
-msgstr "Bootstrappe..."
-
-msgid "Model '"
-msgstr "Modell '"
-
-msgid "' not supported."
-msgstr "' nicht unterstützt."
-
-msgid "Maximum number of errors in bootstraps reached"
-msgstr "Maximale Fehleranzahl in bootstraps erreicht"
-
-msgid "progress function failed: Cancelled by callback"
-msgstr "voortgangsfunctie mislukt: Geannuleerd door callback"
-
-msgid "Computing statistics..."
-msgstr "Berechne Statistiken..."
-
 msgid "%1$s X-Coordinates for variable %2$s was not understood."
 msgid_plural "%1$s X-Coordinates for variables %2$s were not understood."
 msgstr[0] "%1$s X-Koordinaten für Variable %2$s wurde nicht verstanden."
@@ -316,3 +249,67 @@ msgid "%1$s Y-Coordinates for variable %2$s was not understood."
 msgid_plural "%1$s Y-Coordinates for variables %2$s were not understood."
 msgstr[0] "%1$s Y-Koordinaten für Variable %2$s wurde nicht verstanden."
 msgstr[1] "%1$s Y-Koordinaten für Variablen %2$s wurden nicht verstanden."
+
+#~ msgid ""
+#~ "'data' can only be missing if type = 'parametric'. Setting type = "
+#~ "'parametric' and performing parametric bootstrap instead."
+#~ msgstr ""
+#~ "'Daten' darf nur fehlen, wenn Typ = 'parametrisch'. Setze Typ = "
+#~ "'parametrisch' und wähle stattdessen parametrischen Bootstrap."
+
+#~ msgid ""
+#~ "'graph' may not be missing in parametric bootstrap when 'data' is missing."
+#~ msgstr ""
+#~ "'graph' darf im parametrischen Bootstrap nicht fehlen, wenn 'Daten' "
+#~ "fehlen."
+
+#~ msgid "'data' is ignored when using manual parametric bootstrap."
+#~ msgstr ""
+#~ "'Daten' wird bei Verwendung des manuellen parametrischen Bootstraps "
+#~ "ignoriert."
+
+#~ msgid "Removing non-numeric columns:"
+#~ msgstr "Nicht numerische Spalten entfernen:"
+
+#~ msgid ";"
+#~ msgstr ";"
+
+#~ msgid "Jacknife overwrites nBoot to sample size"
+#~ msgstr "Jacknife überschreibt nBoot mit Stichprobengröße"
+
+#~ msgid "Node-wise bootstrapping requires at least three nodes."
+#~ msgstr "Das knotenweise Bootstrapping erfordert mindestens drei Knoten."
+
+#~ msgid "'data' argument must be a data frame"
+#~ msgstr "Argument 'data' muss ein Data Frame sein"
+
+#~ msgid "'model' must be set in parametric bootstrap without 'data'."
+#~ msgstr ""
+#~ "'model' muss im parametrischen Bootstrap ohne 'data' gesetzt werden."
+
+#~ msgid "model set to '"
+#~ msgstr "Modell gesetzt auf '"
+
+#~ msgid "'"
+#~ msgstr "'"
+
+#~ msgid "Estimating sample network..."
+#~ msgstr "Schätzung des Beispielnetzwerks ..."
+
+#~ msgid "Bootstrapping..."
+#~ msgstr "Bootstrappe..."
+
+#~ msgid "Model '"
+#~ msgstr "Modell '"
+
+#~ msgid "' not supported."
+#~ msgstr "' nicht unterstützt."
+
+#~ msgid "Maximum number of errors in bootstraps reached"
+#~ msgstr "Maximale Fehleranzahl in bootstraps erreicht"
+
+#~ msgid "progress function failed: Cancelled by callback"
+#~ msgstr "voortgangsfunctie mislukt: Geannuleerd door callback"
+
+#~ msgid "Computing statistics..."
+#~ msgstr "Berechne Statistiken..."

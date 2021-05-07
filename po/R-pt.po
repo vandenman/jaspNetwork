@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
-"POT-Creation-Date: 2021-03-06 15:52\n"
+"POT-Creation-Date: 2021-05-07 11:21\n"
 "PO-Revision-Date: 2021-04-17 18:26+0000\n"
 "Last-Translator: Lucas Müller-Silveira <mullerlucass@gmail.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/jasp/"
@@ -199,8 +199,8 @@ msgid ""
 "<ul><li>contain an '=' to distinguish between column name and data type.</"
 "ul></li>"
 msgstr ""
-"<ul><li>conter um '=' para distinguir entre nome da coluna e tipo de "
-"dados.</ul></li>"
+"<ul><li>conter um '=' para distinguir entre nome da coluna e tipo de dados.</"
+"ul></li>"
 
 #, fuzzy
 msgid ""
@@ -268,84 +268,6 @@ msgstr ""
 "poucas observações distintas.</li></ul>"
 
 #, fuzzy
-msgid ""
-"'data' can only be missing if type = 'parametric'. Setting type = "
-"'parametric' and performing parametric bootstrap instead."
-msgstr ""
-"'dados' só podem ser ausentes se tipo = 'paramétrico'. Configurando tipo = "
-"'paramétrico' e realizando bootstrap paramétrico."
-
-#, fuzzy
-msgid ""
-"'graph' may not be missing in parametric bootstrap when 'data' is missing."
-msgstr ""
-"'gráfico' não pode estar ausente em bootstrap paramétrico quando 'dados' "
-"estão ausentes."
-
-#, fuzzy
-msgid ""
-"'sampleSize' may not be missing in parametric bootstrap when 'data' is "
-"missing."
-msgstr ""
-"'tamanho da amostra' não pode estar ausente em bootstrap paramétrico quando "
-"'dados' estão ausentes."
-
-#, fuzzy
-msgid "'data' is ignored when using manual parametric bootstrap."
-msgstr "'dados' é ignorado ao realizar bootstrap paramétrico manual."
-
-#, fuzzy
-msgid "Removing non-numeric columns:"
-msgstr "Removendo colunas não-numéricas:"
-
-msgid ";"
-msgstr ";"
-
-msgid "Jacknife overwrites nBoot to sample size"
-msgstr ""
-
-msgid "Node-wise bootstrapping requires at least three nodes."
-msgstr ""
-
-msgid "'data' argument must be a data frame"
-msgstr ""
-
-msgid "'model' must be set in parametric bootstrap without 'data'."
-msgstr ""
-
-msgid "model set to '"
-msgstr ""
-
-msgid "'"
-msgstr ""
-
-msgid "Estimating sample network..."
-msgstr ""
-
-#, fuzzy
-msgid "Bootstrapping..."
-msgstr "Bootstrap"
-
-#, fuzzy
-msgid "Model '"
-msgstr "Modelo '"
-
-#, fuzzy
-msgid "' not supported."
-msgstr "' não suportado."
-
-#, fuzzy
-msgid "Maximum number of errors in bootstraps reached"
-msgstr "Número máximo de erros em bootstraps alcançado"
-
-msgid "progress function failed: Cancelled by callback"
-msgstr ""
-
-#, fuzzy
-msgid "Computing statistics..."
-msgstr "Computando estatísticas..."
-
-#, fuzzy
 msgid "%1$s X-Coordinates for variable %2$s was not understood."
 msgid_plural "%1$s X-Coordinates for variables %2$s were not understood."
 msgstr[0] "%1$s Coordenadas X para a variável %2$s não foi compreendida."
@@ -356,3 +278,57 @@ msgid "%1$s Y-Coordinates for variable %2$s was not understood."
 msgid_plural "%1$s Y-Coordinates for variables %2$s were not understood."
 msgstr[0] "%1$s Coordenadas Y para a variável %2$s não foi compreendida."
 msgstr[1] "%1$s Coordenadas Y para as variáveis %2$s não foram compreendidas."
+
+#, fuzzy
+#~ msgid ""
+#~ "'data' can only be missing if type = 'parametric'. Setting type = "
+#~ "'parametric' and performing parametric bootstrap instead."
+#~ msgstr ""
+#~ "'dados' só podem ser ausentes se tipo = 'paramétrico'. Configurando tipo "
+#~ "= 'paramétrico' e realizando bootstrap paramétrico."
+
+#, fuzzy
+#~ msgid ""
+#~ "'graph' may not be missing in parametric bootstrap when 'data' is missing."
+#~ msgstr ""
+#~ "'gráfico' não pode estar ausente em bootstrap paramétrico quando 'dados' "
+#~ "estão ausentes."
+
+#, fuzzy
+#~ msgid ""
+#~ "'sampleSize' may not be missing in parametric bootstrap when 'data' is "
+#~ "missing."
+#~ msgstr ""
+#~ "'tamanho da amostra' não pode estar ausente em bootstrap paramétrico "
+#~ "quando 'dados' estão ausentes."
+
+#, fuzzy
+#~ msgid "'data' is ignored when using manual parametric bootstrap."
+#~ msgstr "'dados' é ignorado ao realizar bootstrap paramétrico manual."
+
+#, fuzzy
+#~ msgid "Removing non-numeric columns:"
+#~ msgstr "Removendo colunas não-numéricas:"
+
+#~ msgid ";"
+#~ msgstr ";"
+
+#, fuzzy
+#~ msgid "Bootstrapping..."
+#~ msgstr "Bootstrap"
+
+#, fuzzy
+#~ msgid "Model '"
+#~ msgstr "Modelo '"
+
+#, fuzzy
+#~ msgid "' not supported."
+#~ msgstr "' não suportado."
+
+#, fuzzy
+#~ msgid "Maximum number of errors in bootstraps reached"
+#~ msgstr "Número máximo de erros em bootstraps alcançado"
+
+#, fuzzy
+#~ msgid "Computing statistics..."
+#~ msgstr "Computando estatísticas..."

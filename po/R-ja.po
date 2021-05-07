@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspNetwork 0.0.0\n"
-"POT-Creation-Date: 2021-01-05 09:38\n"
+"POT-Creation-Date: 2021-05-07 11:21\n"
 "PO-Revision-Date: 2021-03-12 02:20+0000\n"
 "Last-Translator: Daiki Hojo <dhojo.bayes@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/"
@@ -13,7 +13,8 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.5.2-dev\n"
 
-msgid "After binarizing the data too little variance remained in variable(s): %s."
+msgid ""
+"After binarizing the data too little variance remained in variable(s): %s."
 msgstr ""
 
 msgid "Summary of Network"
@@ -40,13 +41,19 @@ msgstr ""
 msgid "<em>Warning: </em>"
 msgstr ""
 
-msgid "Minimum edge strength ignored in the network plot because it was larger than the absolute value of the strongest edge."
+msgid ""
+"Minimum edge strength ignored in the network plot because it was larger than "
+"the absolute value of the strongest edge."
 msgstr ""
 
-msgid "Minimum edge strength ignored in the network plot of group%1$s %2$s because it was larger than the absolute value of the strongest edge."
+msgid ""
+"Minimum edge strength ignored in the network plot of group%1$s %2$s because "
+"it was larger than the absolute value of the strongest edge."
 msgstr ""
 
-msgid "Bootstrapping is only done when 'Bootstrap network' is ticked and 'Number of Bootstraps' is larger than 0."
+msgid ""
+"Bootstrapping is only done when 'Bootstrap network' is ticked and 'Number of "
+"Bootstraps' is larger than 0."
 msgstr ""
 
 msgid "Centrality measures per variable"
@@ -115,13 +122,17 @@ msgstr ""
 msgid "Centrality Stability"
 msgstr ""
 
-msgid "bootnet crashed with the following error message:\n%s"
+msgid ""
+"bootnet crashed with the following error message:\n"
+"%s"
 msgstr ""
 
-msgid "Please drag all variables to a particular type under \"Analysis options\"."
+msgid ""
+"Please drag all variables to a particular type under \"Analysis options\"."
 msgstr ""
 
-msgid "Coefficient could not be standardized because the variance is too small."
+msgid ""
+"Coefficient could not be standardized because the variance is too small."
 msgstr ""
 
 msgid "Please supply a name for both the x and y-coordinates of the layout."
@@ -133,94 +144,57 @@ msgstr ""
 msgid "Some variables were not matched in the column names of the dataset."
 msgstr ""
 
-msgid "Data supplied in %s cannot be used to determine variables types. Data should:"
+msgid ""
+"Data supplied in %s cannot be used to determine variables types. Data should:"
 msgstr ""
 
 msgid "<ul><li>start with the column name of the variable.</ul></li>"
 msgstr ""
 
-msgid "<ul><li>contain an '=' to distinguish between column name and data type.</ul></li>"
+msgid ""
+"<ul><li>contain an '=' to distinguish between column name and data type.</"
+"ul></li>"
 msgstr ""
 
-msgid "<ul><li>end with either 'g' for Gaussian, 'c' for categorical, or 'p' for Poisson.</ul></li>"
+msgid ""
+"<ul><li>end with either 'g' for Gaussian, 'c' for categorical, or 'p' for "
+"Poisson.</ul></li>"
 msgstr ""
 
-msgid "Supplied data for layout was not understood and instead a circle layout was used."
+msgid ""
+"Supplied data for layout was not understood and instead a circle layout was "
+"used."
 msgstr ""
 
-msgid "Data supplied in %1$s AND %2$s could not be used to determine node locations."
+msgid ""
+"Data supplied in %1$s AND %2$s could not be used to determine node locations."
 msgstr ""
 
 msgid "Data supplied in %s could not be used to determine node locations."
 msgstr ""
 
-msgid "%1$s %2$s Data should only contain numeric:\n                 -start with the column name of the variable.\n                 -contain an '=' to distinguish between column name and coordinate."
+msgid ""
+"%1$s %2$s Data should only contain numeric:\n"
+"                 -start with the column name of the variable.\n"
+"                 -contain an '=' to distinguish between column name and "
+"coordinate."
 msgstr ""
 
-msgid "Data supplied in %s could not be used to determine variables types. Data should: \n- Start with the column name of the variable. \n- Contain an '=' to distinghuish betweem column name and group."
+msgid ""
+"Data supplied in %s could not be used to determine variables types. Data "
+"should: \n"
+"- Start with the column name of the variable. \n"
+"- Contain an '=' to distinghuish betweem column name and group."
 msgstr ""
 
-msgid "Some entries of %1$s were not understood. These are now grouped under '%2$s'."
+msgid ""
+"Some entries of %1$s were not understood. These are now grouped under '%2$s'."
 msgstr ""
 
-msgid "bootnet crashed with the following error message:\n%s. <ul><li>Please check if there are variables in the network with little variance or few distinct observations.</li></ul>"
-msgstr ""
-
-msgid "'data' can only be missing if type = 'parametric'. Setting type = 'parametric' and performing parametric bootstrap instead."
-msgstr ""
-
-msgid "'graph' may not be missing in parametric bootstrap when 'data' is missing."
-msgstr ""
-
-msgid "'sampleSize' may not be missing in parametric bootstrap when 'data' is missing."
-msgstr ""
-
-msgid "'data' is ignored when using manual parametric bootstrap."
-msgstr ""
-
-msgid "Removing non-numeric columns:"
-msgstr ""
-
-msgid ";"
-msgstr ""
-
-msgid "Jacknife overwrites nBoot to sample size"
-msgstr ""
-
-msgid "Node-wise bootstrapping requires at least three nodes."
-msgstr ""
-
-msgid "'data' argument must be a data frame"
-msgstr ""
-
-msgid "'model' must be set in parametric bootstrap without 'data'."
-msgstr ""
-
-msgid "model set to '"
-msgstr ""
-
-msgid "'"
-msgstr ""
-
-msgid "Estimating sample network..."
-msgstr ""
-
-msgid "Bootstrapping..."
-msgstr ""
-
-msgid "Model '"
-msgstr ""
-
-msgid "' not supported."
-msgstr ""
-
-msgid "Maximum number of errors in bootstraps reached"
-msgstr ""
-
-msgid "progress function failed: Cancelled by callback"
-msgstr ""
-
-msgid "Computing statistics..."
+msgid ""
+"bootnet crashed with the following error message:\n"
+"%s. <ul><li>Please check if there are variables in the network with little "
+"variance or few distinct observations.</li></ul>"
 msgstr ""
 
 msgid "%1$s X-Coordinates for variable %2$s was not understood."
