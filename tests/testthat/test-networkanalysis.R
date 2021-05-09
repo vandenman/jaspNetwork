@@ -165,3 +165,22 @@ for (estimator in estimators) {
     jaspTools::expect_equal_plots(testPlot, paste0(estimator, "-network-plot"), dir="NetworkAnalysis")
   })
 }
+
+# test error check
+
+set.seed(123)
+n <- 50
+p <- 5
+dataset <- matrix(rnorm(n * p), n, p)
+dataset[sample(n, 0.5 * n), ] <- NA
+dataset <- as.data.frame(dataset)
+options <- jaspTools::analysisOptions("NetworkAnalysis")
+options$estimator <- "EBICglasso"
+options$variables <- c("V1", "V2", "V3")
+results <- jaspTools::runAnalysis("NetworkAnalysis", dataset, options)
+
+test_that("Too many missing rows returns an error", {
+  r <- results[["results"]]
+  expect_true(r[["error"]])
+  expect_true(any(grepl("rows", r[["errorMessage"]], ignore.case = TRUE)), label = "Entirely missing rows check")
+})
