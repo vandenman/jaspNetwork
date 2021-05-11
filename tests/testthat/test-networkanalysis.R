@@ -181,6 +181,6 @@ results <- jaspTools::runAnalysis("NetworkAnalysis", dataset, options)
 
 test_that("Too many missing rows returns an error", {
   r <- results[["results"]]
-  expect_true(r[["error"]])
-  expect_true(any(grepl("rows", r[["errorMessage"]], ignore.case = TRUE)), label = "Entirely missing rows check")
+  expect_identical(results[["status"]], "validationError")
+  expect_true(any(grepl("rows", results[["results"]][["errorMessage"]], ignore.case = TRUE)), label = "Entirely missing rows check")
 })
