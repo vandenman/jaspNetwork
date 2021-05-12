@@ -100,9 +100,9 @@ NetworkAnalysis <- function(jaspResults, dataset, options) {
       }
     }
 
-
     # default error checks
-    checks <- c("infinity", "variance", "observations", "varCovData")
+    # we check for missingRows due to see https://github.com/jasp-stats/jasp-issues/issues/1068
+    checks <- c("infinity", "variance", "observations", "varCovData", "missingRows")
 
     # hasErrors wants the dataset as a single thing instead of as a list of data.frames
     # we could also just ignore the grouping elements and loop manually though
@@ -148,6 +148,7 @@ NetworkAnalysis <- function(jaspResults, dataset, options) {
                varCovData.grouping = groupingVariable,
                varCovData.corFun = fun,
                varCovData.corArgs = list(use = "pairwise"),
+               missingRows.target = options[["variables"]],
                custom = customChecks,
                exitAnalysisIfErrors = TRUE)
   }
