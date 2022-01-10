@@ -15,5 +15,4 @@ jobs:
 
     steps:    
       - uses: actions/checkout@v2
-      - uses: vandenman/jasp-actions/verify-filenames@test-capitalizations
-
+      - uses: vandenman/jasp-actions/test-capitalizations@verify-capitalization-helpfiles
