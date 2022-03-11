@@ -431,7 +431,7 @@ Form
 			enabled: plotCentrality.checked
 			CheckBox	{	name: "Betweenness";		label: qsTr("Betweenness");			checked: true	}
 			CheckBox	{	name: "Closeness";			label: qsTr("Closeness");			checked: true	}
-			CheckBox	{	name: "Degree";				label: qsTr("Betweenness");			checked: true	}
+			CheckBox	{	name: "Degree";				label: qsTr("Degree");				checked: true	}
 			CheckBox	{	name: "ExpectedInfluence";	label: qsTr("Expected Influence");	checked: true	}
 		}
 
