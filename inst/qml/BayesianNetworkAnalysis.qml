@@ -125,6 +125,36 @@ VariablesForm
 
 	Section
 	{
+		title: qsTr("Model")
+
+		VariablesForm
+		{
+			AvailableVariablesList
+			{
+				title: qsTr("Types of the variables")
+				name: "variablesTypeAvailable"
+				source: ["variables"]
+			}
+
+			AssignedVariablesList { name: "continuousVariables";		title: qsTr("Continuous Variables");	allowedColumns: ["scale"]	}
+			AssignedVariablesList { name: "ordinalVariables";			title: qsTr("Ordinal Variables");		allowedColumns: ["ordinal"]	}
+
+			AssignedVariablesList { name: "blumeCapelVariables";		title: qsTr("Blume Capel Variables");	allowedColumns: ["ordinal"]
+
+				rowComponent: DropDown
+				{
+					name: "levels"
+					source: [{values: [rowValue], use: "levels"}]
+				}
+			}
+
+			AssignedVariablesList { name: "countVariables";				title: qsTr("Count Variables");			allowedColumns: ["scale"]	}
+		}
+
+	}
+
+	Section
+	{
 		title: qsTr("Sampling Options")
 		Layout.columnSpan: 2
 		IntegerField { name: "burnin";	label: qsTr("Burn in: ");		value: 1000;	min: 0; 				max: iter.value / 2;	fieldWidth: 100; id: burnin	}
